@@ -352,6 +352,8 @@ main {
 .image-content-section-second .cta:hover {
     background-color: #0056b3;
 }
+
+/* Adjustments for the second section */
 .image-content-section-second {
     flex-direction: row-reverse;
 }
@@ -361,6 +363,7 @@ main {
     margin-right: 0;
     margin-left: 20px;
 }
+
 
 /* Footer Styles */
 footer {

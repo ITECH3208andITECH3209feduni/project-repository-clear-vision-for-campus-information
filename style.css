@@ -8,13 +8,13 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #ffffff;
+    background-color: #a6e7ff;
     color: #2caee3;
-    position:relative;
+    position: fixed;
     width: 100%;
-    top: 0px;
-    padding-top: 10px;
-    /* z-index: 1000; /* Ensure header stays on top of other content */
+    top: 0;
+    padding: 10px 20px;
+    z-index: 1000;
 }
 
 .container {
@@ -46,12 +46,13 @@ header {
 }
 
 .header-icons {
-	color:#00ffff;
+    color: #00ffff;
     display: flex;
     align-items: right;
 }
+
 .header-icons span {
-	text-decoration:underline;
+    text-decoration: underline;
     color: #ffa500;
 }
 
@@ -60,7 +61,7 @@ header {
 }
 
 .icon img {
-	color:#00ffff;
+    color: #00ffff;
     width: 20px;
     height: auto;
 }
@@ -74,7 +75,6 @@ header {
     position: relative;
     z-index: 1;
 }
-
 
 .map-iframe {
     position: absolute;
@@ -132,13 +132,12 @@ header {
 }
 
 /* Navigation Styles */
-
 nav {
     background-color: #fff;
     padding: 10px 0;
     position: absolute;
     width: 100%;
-    top:70px; /* Adjust based on the height of your header */
+    top: 70px; /* Adjust based on the height of your header */
     z-index: 1000; /* Ensure navbar stays on top of other content */
 }
 
@@ -151,15 +150,14 @@ nav {
 }
 
 nav {
-    margin-right:5px ; /* Push the nav to the right */
+    margin-right: 5px; /* Push the nav to the right */
 }
 
 nav ul {
     list-style-type: none;
-    margin:0;
+    margin: 0;
     padding: 0;
     text-align: center;
-	
 }
 
 nav ul li {
@@ -172,11 +170,11 @@ nav ul li a {
     color: #7bc4ef;
     text-decoration: underline;
     padding: 10px 20px;
-	position: left;
+    position: left;
 }
 
 nav ul li:hover {
-    background-color: #555;
+    background-color: #ffa500;
 }
 
 .dropdown-content {
@@ -198,81 +196,12 @@ nav ul li:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* Header Styles 
-header {
-    background-color: #ffffff;
-    color: #2caee3;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 10px 20px; /* Adjusted padding 
-    z-index: 1000;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    display: flex; /* Ensure logo and nav are in a row */
-    align-items: center; /* Align items vertically 
-}
-
-.logo img {
-    width: 100px; /* Adjust logo width as needed 
-    height: auto;
-}
-
-nav {
-    margin-left: auto; /* Push the nav to the right */
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Ensure nav items are in a row */
-}
-
-nav ul li {
-    margin-left: 20px; /* Adjust spacing between nav items */
-}
-
-nav ul li a {
-    color: #7bc4ef;
-    text-decoration: none;
-    padding: 10px 15px; /* Adjust padding */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li:hover {
-    background-color: #f2f2f2;
-}
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 10px; /* Adjusted padding */
-    }
-
-    .logo img {
-        width: 80px; /* Adjusted logo width */
-    }
-
-    nav ul li {
-        margin-left: 15px; /* Adjusted spacing */
-    }
-}
-
 
 /* Main Content Styles */
 main {
     padding-top: 120px; /* Adjust based on the height of your navbar */
+	margin-left: 50px;
+	
 }
 
 .content-wrapper {
@@ -297,72 +226,123 @@ main {
     object-fit: cover;
 }
 
-
-.quotes-section {
+/* Styles for the quote section */
+.quote-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
-.quotes-section blockquote {
-    margin: 0 auto 20px;
+.quote-container {
+    background-color: #a6e7ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.quote-text {
+    font-size: 24px;
     font-style: italic;
+    color: #333;
+    padding: 20px;
+    border-left: 4px solid #007bff; /* Add a left border for emphasis */
+}
+
+.quote-text p {
+    margin: 0;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .quote-text {
+        font-size: 20px;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-content-container {
+    width: calc(50% - 20px); /* Adjust width to fit two containers in a row with spacing */
 }
 
 .image-content-section,
 .image-content-section-second {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Add spacing between sections */
 }
 
 .image-content-section .image,
-.image-content-section-second .content {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.image-content-section .image img,
-.image-content-section-second .content img {
-    width: 100%;
-    height: auto;
-}
-
-.image-content-section .content,
 .image-content-section-second .image {
     flex: 1;
 }
 
-.image-content-section .content h2,
-.image-content-section-second .image h2 {
+.image-content-section .content,
+.image-content-section-second .content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.image {
+    flex: 1;
+    height: 200px; /* Set a fixed height for the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+
+.content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.content h2 {
     margin-top: 0;
 }
 
-.image-content-section .cta,
-.image-content-section-second .cta {
+.content p {
+    margin-bottom: 20px;
+}
+
+.cta {
     display: inline-block;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.image-content-section .cta:hover,
-.image-content-section-second .cta:hover {
+.cta:hover {
     background-color: #0056b3;
 }
 
-/* Adjustments for the second section */
-.image-content-section-second {
-    flex-direction: row-reverse;
+@media screen and (max-width: 768px) {
+    .image-content-container {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
 
-.image-content-section-second .image,
-.image-content-section-second .content {
-    margin-right: 0;
-    margin-left: 20px;
-}
+
+
+
 
 /* Footer Styles */
 footer {
@@ -484,33 +464,36 @@ footer {
     }
 }
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+/* Our Courses Section */
+.our-courses {
+    padding: 40px 0; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Background color for the section */
 }
-.overlay h3 {
-    margin: 0;
-    color: #ffa500;
-    font-size: 24px;
+.our-courses .h2{
+	margin-left	:50px;
+}	
+.our-courses .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards horizontally */
 }
 
 .card {
     position: relative;
-    width: 300px;
-    height: 200px;
-    margin-bottom: 20px;
-    overflow: hidden;
+    width: 300px; /* Set width of each card */
+    height: 200px; /* Set height of each card */
+    margin: 0 20px 20px 0; /* Add spacing between cards */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .card img {
     width: 100%;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Add transition effect for scaling */
 }
 
 .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Scale up image on hover */
 }
 
 .overlay {
@@ -518,20 +501,220 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color:#000000;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
     padding: 10px;
     text-align: center;
-    transition: opacity 0.3s ease;
-    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition effect for opacity */
+    opacity: 0; /* Initially hidden */
 }
 
 .card:hover .overlay {
-    opacity: 1;
-}
-.overlay span{
-	color: #ffa500;
-
+    opacity: 1; /* Show overlay on hover */
 }
 
+.overlay span {
+    color: #ffa500; /* Text color for course name */
+    font-size: 20px; /* Font size for course name */
+}
+
+.overlay span:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Make cards 50% width with spacing */
+    }
+}
 
 
+/* Events Section */
+.events-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.events-section .container {
+    display: flex;
+    flex-direction: column; /* Align events vertically */
+    align-items: center; /* Center events horizontally */
+    text-align: center;
+}
+
+.events-section h2 {
+    margin-bottom: 20px;
+	margin-left:50px;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    text-align: left; /* Align event details to the left */
+}
+
+.event img {
+    width: 200px;
+    height: auto;
+    margin-right: 80px;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    margin: 0;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.event-details p {
+    margin: 5px 0;
+}
+
+.event-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+/* News and Events Headlines */
+.news-headlines {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.news-headlines .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-headlines h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+	margin-left:50px;
+}
+
+.news-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.news-article img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.news-description {
+    flex: 1;
+}
+
+.news-description h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+	color: #000000;
+    text-decoration: underline;
+}
+
+.news-description p {
+    margin: 0;
+}
+
+.news-description a {
+    color: #00000;
+    text-decoration: none;
+}
+
+
+/* News and Events Links */
+.news-links {
+    background-color: #000;
+    color: #000000;
+    padding: 20px;
+}
+
+.news-links .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-links ul li {
+    margin-bottom: 10px;
+}
+
+.news-links ul li a {
+    color: #00000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .news-headlines,
+    .news-links {
+        padding: 20px 0;
+    }
+
+    .news-headlines .container,
+    .news-links .container {
+        padding: 0 20px;
+    }
+}
+
+/* Feedback Section */
+.feedback-section {
+    background-color: #a6e7ff;
+    padding: 40px 0;
+}
+
+.feedback-section .container {
+    text-align: center;
+	background-color: #a6e7ff;
+}
+
+.feedback-section h2 {
+    margin-bottom: 20px;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.feedback-form textarea {
+    height: 150px;
+}
+
+.feedback-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}

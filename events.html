@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIE (International Institute Of Education) | Home</title>
+  <link rel="shortcut icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-icons-container">
+            <div class="header-icons">
+                <!-- Staff Portal Icon -->
+                <div class="icon">
+                    <a href="staff-portal.html">
+                        <i class="fas fa-users"></i>
+                        <span>Staffs</span>
+                    </a>
+                </div>
+                
+                <!-- Student Portal Icon -->
+                <div class="icon">
+                    <a href="student-portal.html">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Students</span>
+                    </a>
+                </div>
+                
+                <!-- Campus Map Icon -->
+                <div class="icon">
+                    <a href="https://viewer.mapme.com/ceee2501-6bba-4407-88e5-5edab0fce542" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location</span>
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="button" id="searchButton">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ <nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="IIE Logo"></a>
+        </div>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About Us</a>
+                <div class="dropdown-content">
+                    <a href="welcome.html">Welcome Message</a>
+                    <a href="why-study-at-iie.html">Why Study At IIE?</a>
+                    <a href="our-values.html">Our Values</a>
+                    <a href="representatives.html">Representatives</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="events.html">Events</a></li>
+            <li class="dropdown">
+                <a href="#">Courses</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="international-courses.html">International Student</a>
+                        <div class="submenu-content">
+                            <a href="#">Accounting</a>
+                            <a href="#">Community Service</a>
+                            <a href="#">Early Childhood Education</a>
+                            <a href="#">Health And Science</a>
+                            <a href="#">Hospitality Management</a>
+                            <a href="#">Information Technology</a>
+                            <a href="#">Management</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="domestic-courses.html">Domestic Student</a>
+                        <div class="submenu-content">
+                            <a href="#">Accounting</a>
+                            <a href="#">Community Services</a>
+                            <a href="#">Early Childhood Education</a>
+                            <a href="#">Health And Science</a>
+                            <a href="#">Hospitality Management</a>
+                            <a href="#">Information Technology</a>
+                            <a href="#">Management</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Resources</a>
+                <div class="dropdown-content">
+                    <a href="handbook.html">Handbook</a>
+                    <a href="student-portal-login.html">Student Portal Login</a>
+                    <a href="e-learning.html">E-Learning</a>
+                    <a href="overseas-student-health-cover.html">Overseas Student Health Cover</a>
+                    <a href="service-and-facility.html">Service And Facility</a>
+                    <a href="living-in-australia.html">Living In Australia</a>
+                    <a href="payment-options.html">Payment Options</a>
+                    <a href="study-pay-payment-plan.html">Study Pay Payment Plan</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="image-container">
+        <img src="images/person.jpg" alt="Campus">
+    </div>
+
+<section class="event-description">
+    <h2>Discover Our Upcoming Events</h2>
+    <p>At the International Institute of Education, we believe that learning extends beyond the classroom. Our upcoming events are a testament to this belief, offering a diverse array of opportunities for personal and professional growth. From enlightening academic lectures by renowned experts to vibrant cultural festivals that celebrate diversity, and thrilling sporting events that foster community spirit, we have something for everyone. Browse through our event offerings below and be sure to join us for these enriching experiences. Mark your calendars and be a part of our dynamic community!</p>
+</section>
+
+
+
+
+    <main>
+        <div class="search-filter-container">
+            <input type="text" id="search-bar" placeholder="Search events...">
+            <div class="filter-container">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="previous">Previous</option>
+                </select>
+            </div>
+        </div>
+
+
+
+    <!-- Event Cards -->
+        <div class="event-container">
+            <div class="event-card" data-date="2024-06-10T15:00:00Z">
+                <img src="images/planet.jpg" alt="Astrophysics">
+                <h3>Astrophysics</h3>
+                <p>Lecture by Dr. John Smith<br>June 10th, 3:00 PM - 5:00 PM</p>
+                <a href="login.html" class="cta">Book Event</a>
+                <button class="view-event-btn cta" data-event="1">View Event</button>
+            </div>
+
+            <div class="event-card" data-date="2024-07-05T18:00:00Z">
+                <img src="images/food.jpg" alt="Food Festival">
+                <h3>Food Festival</h3>
+                <p>Explore culinary delights from around the world<br>July 5th, 6:00 PM - 9:00 PM</p>
+                <a href="login.html" class="cta">Book Event</a>
+                <button class="view-event-btn cta" data-event="2">View Event</button>
+            </div>
+
+            <div class="event-card" data-date="2024-08-20T10:00:00Z">
+                <img src="images/basketball.jpg" alt="Basketball Tournament">
+                <h3>Basketball Tournament</h3>
+                <p>Cheer for your college team in an intense basketball tournament<br>Aug 20th - Aug 25th, 10:00 AM - 6:00 PM</p>
+                <a href="login.html" class="cta">Book Event</a>
+                <button class="view-event-btn cta" data-event="3">View Event</button>
+            </div>
+
+            <div class="event-card" data-date="2024-09-08T19:00:00Z">
+                <img src="images/movie.jpg" alt="Movie Night">
+                <h3>Movie Night</h3>
+                <p>Enjoy a cozy movie night under the stars<br>Sep 8th, 7:00 PM - 10:00 PM</p>
+                <a href="login.html" class="cta">Book Event</a>
+                <button class="view-event-btn cta" data-event="4">View Event</button>
+            </div>
+
+            <div class="event-card" data-date="2024-10-15T10:00:00Z">
+                <img src="images/fun.jpg" alt="Career Fair">
+                <h3>Career Fair 2024</h3>
+                <p>Connect with top employers and explore career opportunities<br>Oct 15th, 10:00 AM - 4:00 PM</p>
+                <a href="login.html" class="cta">Book Event</a>
+                <button class="view-event-btn cta" data-event="5">View Event</button>
+            </div>
+
+ <div class="event-card" data-date="2024-12-05T18:00:00Z">
+        <img src="images/holiday.jpg" alt="Holiday Gala">
+        <h3>Holiday Gala 2024</h3>
+        <p>Celebrate the season with a night of festivities and networking<br>Dec 5th, 6:00 PM - 10:00 PM</p>
+        <a href="login.html" class="cta">Book Event</a>
+        <button class="view-event-btn cta" data-event="7">View Event</button>
+    </div>
+
+    <div class="event-card" data-date="2025-01-10T14:00:00Z">
+        <img src="images/workshop.jpg" alt="Tech Workshop">
+        <h3>Tech Workshop 2025</h3>
+        <p>Enhance your skills with hands-on tech workshops and seminars<br>Jan 10th, 2:00 PM - 6:00 PM</p>
+        <a href="login.html" class="cta">Book Event</a>
+        <button class="view-event-btn cta" data-event="8">View Event</button>
+    </div>
+
+    <div class="event-card" data-date="2025-02-14T17:00:00Z">
+        <img src="images/valentine.jpg" alt="Valentine's Day Social">
+        <h3>Valentine's Day Social 2025</h3>
+        <p>Join us for an evening of fun and networking<br>Feb 14th, 5:00 PM - 9:00 PM</p>
+        <a href="login.html" class="cta">Book Event</a>
+        <button class="view-event-btn cta" data-event="9">View Event</button>
+    </div>
+
+            <div class="event-card" data-date="2024-11-12T10:00:00Z">
+                <img src="images/art.jpg" alt="Art Exhibition">
+                <h3>Art Exhibition</h3>
+                <p>Discover creativity at our annual art exhibition<br>Nov 12th - Nov 15th, 10:00 AM - 6:00 PM</p>
+                <a href="login.html" class="cta">Book Event</a>
+                <button class="view-event-btn cta" data-event="6">View Event</button>
+            </div>
+        </div>
+
+        <!-- Modals for Event Details -->
+        <div id="modal-1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Astrophysics</h2>
+                <p>Lecture by Dr. John Smith<br>June 10th, 3:00 PM - 5:00 PM</p>
+                <p>Join us for an insightful lecture on astrophysics by renowned Dr. John Smith. The lecture will cover various fascinating topics related to the universe.</p>
+            </div>
+        </div>
+
+        <div id="modal-2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Food Festival</h2>
+                <p>Explore culinary delights from around the world<br>July 5th, 6:00 PM - 9:00 PM</p>
+                <p>Experience a variety of cuisines from different cultures at our food festival. Enjoy the diverse flavors and have a great time with friends and family.</p>
+            </div>
+        </div>
+
+        <div id="modal-3" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Basketball Tournament</h2>
+                <p>Cheer for your college team in an intense basketball tournament<br>Aug 20th - Aug 25th, 10:00 AM - 6:00 PM</p>
+                <p>Come and support your college team in a week-long basketball tournament. Watch exciting matches and cheer for your favorite players.</p>
+            </div>
+        </div>
+
+        <div id="modal-4" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Movie Night</h2>
+                <p>Enjoy a cozy movie night under the stars<br>Sep 8th, 7:00 PM - 10:00 PM</p>
+                <p>Join us for a relaxing movie night under the stars. Bring your blankets and enjoy a classic movie with friends and family.</p>
+            </div>
+        </div>
+
+        <div id="modal-5" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Career Fair 2024</h2>
+                <p>Connect with top employers and explore career opportunities<br>Oct 15th, 10:00 AM - 4:00 PM</p>
+                <p>Don't miss the opportunity to connect with top employers at our Career Fair. Explore various career options and network with industry professionals.</p>
+            </div>
+        </div>
+<div id="modal-7" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Holiday Gala 2024</h2>
+        <p>Celebrate the season with a night of festivities and networking<br>Dec 5th, 6:00 PM - 10:00 PM</p>
+        <p>Join us for an elegant evening filled with music, dance, and holiday cheer. Network with fellow attendees and enjoy the festive atmosphere.</p>
+    </div>
+</div>
+
+<div id="modal-8" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tech Workshop 2025</h2>
+        <p>Enhance your skills with hands-on tech workshops and seminars<br>Jan 10th, 2:00 PM - 6:00 PM</p>
+        <p>Participate in various tech workshops and seminars led by industry experts. A great opportunity to upgrade your skills and knowledge.</p>
+    </div>
+</div>
+
+<div id="modal-9" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Valentine's Day Social 2025</h2>
+        <p>Join us for an evening of fun and networking<br>Feb 14th, 5:00 PM - 9:00 PM</p>
+        <p>Celebrate Valentine's Day with us at a social event filled with activities and opportunities to meet new people. Enjoy games, food, and more!</p>
+    </div>
+</div>
+
+        <div id="modal-6" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Art Exhibition</h2>
+                <p>Discover creativity at our annual art exhibition<br>Nov 12th - Nov 15th, 10:00 AM - 6:00 PM</p>
+                <p>Visit our annual art exhibition to see stunning artworks by talented artists. Enjoy a wide range of artistic expressions and get inspired.</p>
+            </div>
+        </div>
+    </main>
+
+
+ 
+    
+      
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-section contact-info">
+            <h3>Contact Us</h3>
+            <p>International Institute of Education- IIE</p>
+            <p>Level 1 16-18 Wentworth Street, Parramatta, NSW, 2150, Australia</p>
+            <p>Phone: +61 (02) 88972125</p>
+            <p>Email: info@iie.edu.au</p>
+        </div>
+        
+        <div class="footer-section useful-links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#">Department of Home Affairs</a></li>
+                <li><a href="#">Department of Education</a></li>
+                <li><a href="#">Study Australia</a></li>
+                <li><a href="#">ASQA</a></li>
+                <li><a href="#">Commonwealth Ombudsman</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section about-us">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Why Study at IIE?</a></li>
+                <li><a href="#">Our Values</a></li>
+                <li><a href="#">Representatives</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section online-forms">
+            <h3>Online Forms</h3>
+            <ul>
+                <li><a href="#">Agent Application</a></li>
+                <li><a href="#">International Student Enrolment</a></li>
+                <li><a href="#">ID Card Request</a></li>
+                <li><a href="#">Refund Request Application</a></li>
+                <li><a href="#">Student Document Request Form</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section additional-links">
+            <h3>Additional Links</h3>
+            <ul>
+                <li><a href="#">Staff Login</a></li>
+                <li><a href="#">Partner Login</a></li>
+            </ul>
+            <p>&copy; International Institute of Education | RTO No: 45150 CRICOS: 03838G | Developed By Ruptha</p>
+        </div>
+    </div>
+</footer>
+   
+   <script src="main.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+  <script src="scripts.js"></script>
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuBtn = document.querySelector('.hamburger-menu');
+            const menu = document.querySelector('.menu');
+            menuBtn.addEventListener('click', function () {
+                menu.classList.toggle('show');
+            });
+
+            const searchBar = document.getElementById('search-bar');
+            const categoryFilter = document.getElementById('category');
+            const eventCards = document.querySelectorAll('.event-card');
+
+            function filterEvents() {
+                const searchTerm = searchBar.value.toLowerCase();
+                const category = categoryFilter.value;
+                const now = new Date();
+
+                eventCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    const eventDate = new Date(card.getAttribute('data-date'));
+
+                    let matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+                    let matchesCategory = false;
+
+                    if (category === 'all') {
+                        matchesCategory = true;
+                    } else if (category === 'upcoming' && eventDate >= now) {
+                        matchesCategory = true;
+                    } else if (category === 'previous' && eventDate < now) {
+                        matchesCategory = true;
+                    }
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            searchBar.addEventListener('input', filterEvents);
+            categoryFilter.addEventListener('change', filterEvents);
+            filterEvents();
+
+            const viewEventButtons = document.querySelectorAll('.view-event-btn');
+            const modals = document.querySelectorAll('.modal');
+
+            viewEventButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const event = button.getAttribute('data-event');
+                    const modal = document.getElementById(`modal-${event}`);
+                    modal.style.display = 'block';
+                });
+            });
+
+            modals.forEach(modal => {
+                const closeButton = modal.querySelector('.close-btn');
+                closeButton.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            });
+
+                   });
+    </script>
+</body>
+</html>
+

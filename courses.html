@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIE (International Institute Of Education) | Courses</title>
+    <link rel="stylesheet" href="beauty.css">
+</head>
+<body>
+    <header>
+        <div class="header-icons-container">
+            <div class="header-icons">
+                <!-- Staff Portal Icon -->
+                <div class="icon">
+                    <a href="staff-portal.html">
+                        <i class="fas fa-users"></i>
+                        <span>Staffs</span>
+                    </a>
+                </div>
+                
+                <!-- Student Portal Icon -->
+                <div class="icon">
+                    <a href="LogIn/index.php">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Students</span>
+                    </a>
+                </div>
+                
+                <!-- Campus Map Icon -->
+                <div class="icon">
+                    <a href="https://viewer.mapme.com/ceee2501-6bba-4407-88e5-5edab0fce542" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location</span>
+                    </a>
+                </div>
+                
+                <!-- Header Search Bar -->
+                <div class="header-search-bar">
+                    <input type="text" id="headerSearchInput" placeholder="Search...">
+                    <button type="button" id="headerSearchButton">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.php"><img src="images/logo.png" alt="IIE Logo"></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="aboutus.html">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="welcome.html">Welcome Message</a>
+                        <a href="why-study-at-iie.html">Why Study At IIE?</a>
+                        <a href="our-values.html">Our Values</a>
+                        <a href="representatives.html">Representatives</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </li>
+                <li><a href="events.html">Events</a></li>
+                <li class="dropdown">
+                    <a href="#">Courses</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="handbook.html">Handbook</a>
+                        <a href="student-portal-login.html">Student Portal Login</a>
+                        <a href="e-learning.html">E-Learning</a>
+                        <a href="overseas-student-health-cover.html">Overseas Student Health Cover</a>
+                        <a href="service-and-facility.html">Service And Facility</a>
+                        <a href="living-in-australia.html">Living In Australia</a>
+                        <a href="payment-options.html">Payment Options</a>
+                        <a href="study-pay-payment-plan.html">Study Pay Payment Plan</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-container">
+    <div class="header-content">
+        <h1>Explore Our Courses</h1>
+    </div>
+</div>
+    <!-- Main Search Bar -->
+    <div class="main-search-bar">
+        <input type="text" id="mainSearchInput" placeholder="Search for courses...">
+       
+    </div>
+<div id="searchResults"></div>
+
+    
+    <main>
+          
+        <div class="course-grid">
+            <div class="course-category" onclick="showDetails('accounting')">
+                <h2>Accounting</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('arts')">
+                <h2>Arts</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('business')">
+                <h2>Business</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('science')">
+                <h2>Science</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('law')">
+                <h2>Law</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('psychology')">
+                <h2>Psychology</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('design')">
+                <h2>Design</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('communication')">
+                <h2>Communication</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('health')">
+                <h2>Health</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('media')">
+                <h2>Media</h2>
+            </div>
+            <div class="course-category" onclick="showDetails('fashion')">
+                <h2>Fashion</h2>
+            </div>
+        </div>
+
+        <!-- Course Details Sections -->
+<div id="accounting" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Accounting</h2>
+    <p><strong>Introduction:</strong> This course provides a comprehensive introduction to accounting principles and practices, focusing on financial reporting, bookkeeping, and analysis.</p>
+    <p><strong>Duration:</strong> 12 weeks</p>
+    <p><strong>Course Objectives:</strong> To understand the fundamental principles of accounting, prepare financial statements, and analyze financial data.</p>
+    <p><strong>Learning Outcomes:</strong> Students will be able to create accurate financial reports, manage budgets, and perform financial analysis.</p>
+    <p><strong>Assessment:</strong> Assignments, quizzes, and a final exam. Practical case studies and project work will also be included.</p>
+    <p><strong>Fees Structure:</strong> $1,200</p>
+    <p><strong>Career Options:</strong> Accountant, Financial Analyst, Auditor. Potential roles include working in corporate finance, accounting firms, or government agencies.</p>
+    <p><strong>Practical Applications:</strong> Skills gained can be applied in bookkeeping, financial management, and regulatory compliance within various organizations.</p>
+</div>
+
+<div id="arts" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Arts</h2>
+    <p><strong>Introduction:</strong> This course explores various art forms and creative techniques, including visual arts, sculpture, and multimedia art.</p>
+    <p><strong>Duration:</strong> 10 weeks</p>
+    <p><strong>Course Objectives:</strong> To develop an understanding of different art styles, techniques, and the historical context of art.</p>
+    <p><strong>Learning Outcomes:</strong> Students will gain the ability to create art pieces, critique artworks, and understand the evolution of art.</p>
+    <p><strong>Assessment:</strong> Projects, presentations, and participation. Students will create their own art pieces and participate in group critiques.</p>
+    <p><strong>Fees Structure:</strong> $950</p>
+    <p><strong>Career Options:</strong> Art Director, Gallery Curator, Illustrator. Opportunities exist in art galleries, studios, and creative agencies.</p>
+    <p><strong>Practical Applications:</strong> Knowledge gained can be used in creating art, managing art exhibitions, and developing art-based projects.</p>
+</div>
+
+<div id="business" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Business</h2>
+    <p><strong>Introduction:</strong> This course covers fundamental business concepts and practices, including management, marketing, and financial analysis.</p>
+    <p><strong>Duration:</strong> 14 weeks</p>
+    <p><strong>Course Objectives:</strong> To provide a broad understanding of business operations, management strategies, and market dynamics.</p>
+    <p><strong>Learning Outcomes:</strong> Students will be able to manage business operations, develop marketing strategies, and analyze financial statements.</p>
+    <p><strong>Assessment:</strong> Case studies, exams, and group projects. Practical assignments will involve real-world business scenarios.</p>
+    <p><strong>Fees Structure:</strong> $1,500</p>
+    <p><strong>Career Options:</strong> Business Manager, Entrepreneur, Market Analyst. Potential careers include roles in corporate management, consultancy, and startups.</p>
+    <p><strong>Practical Applications:</strong> Skills are applicable in business management, strategic planning, and market analysis across various industries.</p>
+</div>
+
+<div id="science" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Science</h2>
+    <p><strong>Introduction:</strong> This course provides an overview of various scientific disciplines, including biology, chemistry, and physics.</p>
+    <p><strong>Duration:</strong> 16 weeks</p>
+    <p><strong>Course Objectives:</strong> To introduce the fundamental concepts of scientific inquiry, experimentation, and analysis.</p>
+    <p><strong>Learning Outcomes:</strong> Students will understand basic scientific principles, conduct experiments, and analyze scientific data.</p>
+    <p><strong>Assessment:</strong> Laboratory work, quizzes, and a final project. Students will perform experiments and write lab reports.</p>
+    <p><strong>Fees Structure:</strong> $1,800</p>
+    <p><strong>Career Options:</strong> Research Scientist, Lab Technician, Science Educator. Careers in research, education, and scientific analysis are possible.</p>
+    <p><strong>Practical Applications:</strong> Knowledge can be applied in research labs, educational settings, and scientific research projects.</p>
+</div>
+
+<div id="law" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Law</h2>
+    <p><strong>Introduction:</strong> This course covers the basics of legal systems and principles, focusing on contract law, criminal law, and legal procedures.</p>
+    <p><strong>Duration:</strong> 15 weeks</p>
+    <p><strong>Course Objectives:</strong> To provide a foundation in legal principles, the structure of legal systems, and the application of laws.</p>
+    <p><strong>Learning Outcomes:</strong> Students will understand legal concepts, analyze legal issues, and apply legal principles to case studies.</p>
+    <p><strong>Assessment:</strong> Essays, case studies, and a final exam. Students will also participate in mock trials and legal discussions.</p>
+    <p><strong>Fees Structure:</strong> $2,000</p>
+    <p><strong>Career Options:</strong> Lawyer, Legal Assistant, Compliance Officer. Opportunities in legal practice, compliance roles, and legal consultancy.</p>
+    <p><strong>Practical Applications:</strong> Skills can be used in legal practice, compliance, and legal advisory roles in various sectors.</p>
+</div>
+
+<div id="psychology" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Psychology</h2>
+    <p><strong>Introduction:</strong> This course explores fundamental concepts in psychology, including human behavior, mental processes, and psychological theories.</p>
+    <p><strong>Duration:</strong> 12 weeks</p>
+    <p><strong>Course Objectives:</strong> To understand the basics of psychological theories, research methods, and the application of psychology in real-life contexts.</p>
+    <p><strong>Learning Outcomes:</strong> Students will analyze psychological phenomena, apply psychological concepts to everyday situations, and conduct basic psychological research.</p>
+    <p><strong>Assessment:</strong> Research papers, presentations, and exams. Students will engage in psychological experiments and case study analyses.</p>
+    <p><strong>Fees Structure:</strong> $1,100</p>
+    <p><strong>Career Options:</strong> Psychologist, Counselor, Human Resources Specialist. Potential roles in mental health, counseling, and human resource management.</p>
+    <p><strong>Practical Applications:</strong> Skills are applicable in mental health services, counseling, and organizational behavior management.</p>
+</div>
+
+<div id="design" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Design</h2>
+    <p><strong>Introduction:</strong> This course covers basic design principles and techniques, focusing on visual communication, color theory, and design software.</p>
+    <p><strong>Duration:</strong> 8 weeks</p>
+    <p><strong>Course Objectives:</strong> To develop design skills, understand design principles, and use design tools effectively.</p>
+    <p><strong>Learning Outcomes:</strong> Students will create design projects, use design software, and understand visual aesthetics.</p>
+    <p><strong>Assessment:</strong> Design projects, critiques, and a final portfolio. Students will develop a portfolio showcasing their design skills.</p>
+    <p><strong>Fees Structure:</strong> $900</p>
+    <p><strong>Career Options:</strong> Graphic Designer, UI/UX Designer, Creative Director. Roles in design studios, tech companies, and advertising agencies.</p>
+    <p><strong>Practical Applications:</strong> Knowledge can be applied in graphic design, web design, and multimedia projects.</p>
+</div>
+
+<div id="communication" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Communication</h2>
+    <p><strong>Introduction:</strong> This course focuses on effective communication skills, including public speaking, written communication, and interpersonal skills.</p>
+    <p><strong>Duration:</strong> 10 weeks</p>
+    <p><strong>Course Objectives:</strong> To enhance communication skills, understand communication theories, and apply these skills in various contexts.</p>
+    <p><strong>Learning Outcomes:</strong> Students will improve their public speaking skills, develop effective written communication, and enhance their interpersonal skills.</p>
+    <p><strong>Learning Outcomes:</strong> Students will improve their public speaking skills, develop effective written communication, and enhance their interpersonal skills.</p>
+<p><strong>Assessment:</strong> Oral presentations, written assignments, and participation in group discussions. Students will also engage in role-playing exercises to practice communication scenarios.</p>
+<p><strong>Fees Structure:</strong> $850</p>
+<p><strong>Career Options:</strong> Public Relations Specialist, Communications Coordinator, Corporate Trainer. Careers in media relations, organizational communication, and training roles are available.</p>
+<p><strong>Practical Applications:</strong> Skills can be applied in crafting persuasive messages, managing public relations, and facilitating effective internal communication within organizations.</p>
+</div>
+
+<div id="health" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Health</h2>
+    <p><strong>Introduction:</strong> This course provides an overview of health and wellness, including topics such as nutrition, mental health, and preventive care.</p>
+    <p><strong>Duration:</strong> 12 weeks</p>
+    <p><strong>Course Objectives:</strong> To understand the principles of health and wellness, learn about various health issues, and promote healthy lifestyle choices.</p>
+    <p><strong>Learning Outcomes:</strong> Students will be able to assess their health, make informed decisions about wellness, and implement health-promoting practices in daily life.</p>
+    <p><strong>Assessment:</strong> Quizzes, health assessments, and a final project. Students will also complete a wellness plan and participate in group discussions.</p>
+    <p><strong>Fees Structure:</strong> $1,100</p>
+    <p><strong>Career Options:</strong> Health Educator, Wellness Coach, Public Health Advisor. Potential roles in health promotion, community health programs, and wellness consulting.</p>
+    <p><strong>Practical Applications:</strong> Knowledge can be applied in health education, community wellness initiatives, and personal health management.</p>
+</div>
+
+<div id="media" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Media</h2>
+    <p><strong>Introduction:</strong> This course explores the media landscape, including journalism, digital media, and media ethics.</p>
+    <p><strong>Duration:</strong> 14 weeks</p>
+    <p><strong>Course Objectives:</strong> To understand media principles, analyze media content, and explore the impact of media on society.</p>
+    <p><strong>Learning Outcomes:</strong> Students will be able to critically analyze media messages, create media content, and understand media ethics and regulations.</p>
+    <p><strong>Assessment:</strong> Media analysis projects, content creation assignments, and a final exam. Students will also participate in media critiques and discussions.</p>
+    <p><strong>Fees Structure:</strong> $1,400</p>
+    <p><strong>Career Options:</strong> Media Analyst, Journalist, Digital Content Creator. Careers in media production, journalism, and digital content management.</p>
+    <p><strong>Practical Applications:</strong> Skills can be used in media production, content creation, and media analysis in various media outlets and digital platforms.</p>
+</div>
+
+<div id="fashion" class="course-details">
+    <button class="back-button" onclick="hideDetails()">Back to Courses</button>
+    <h2>Introduction to Fashion</h2>
+    <p><strong>Introduction:</strong> This course covers the fundamentals of fashion design, including design principles, fabric selection, and trend analysis.</p>
+    <p><strong>Duration:</strong> 8 weeks</p>
+    <p><strong>Course Objectives:</strong> To develop design concepts, understand fabric properties, and analyze fashion trends.</p>
+    <p><strong>Learning Outcomes:</strong> Students will be able to create fashion designs, select appropriate fabrics, and stay updated with current fashion trends.</p>
+    <p><strong>Assessment:</strong> Design projects, fabric analysis assignments, and a final portfolio. Students will develop a collection and participate in design critiques.</p>
+    <p><strong>Fees Structure:</strong> $950</p>
+    <p><strong>Career Options:</strong> Fashion Designer, Textile Consultant, Fashion Merchandiser. Opportunities in fashion design, textile industry, and retail management.</p>
+    <p><strong>Practical Applications:</strong> Knowledge can be used in designing fashion collections, consulting on textiles, and managing fashion retail operations.</p>
+</div>
+
+
+        <!-- Why Study Section -->
+        <section class="why-study">
+            <h2>Why Study Here?</h2>
+            <p>Our campus offers a unique learning environment that blends academic excellence with practical experience. Here are some reasons why you should consider studying with us:</p>
+            <ul
+ <ul>
+                <li>Experienced and passionate faculty members</li>
+                <li>State-of-the-art facilities and resources</li>
+                <li>Innovative and industry-relevant course content</li>
+                <li>Strong support and career guidance services</li>
+                <li>Vibrant campus life with numerous extracurricular activities</li>
+                <li>Opportunities for internships and hands-on learning</li>
+            </ul>
+            <p>Join us and be part of a community dedicated to your success and growth.</p>
+            <a href="apply-now.html" class="cta-button">Start Your Journey Today</a>
+        </section>
+
+<!-- Toggle Chatbot Button -->
+<button id="toggleChatbot" style="display: none;">Chatbot</button>
+
+<!-- Chatbot Container -->
+<div id="chatbotContainer" class="chatbot-container">
+    <div class="chatbot-header">
+        <h3>Chat with Us!</h3>
+        <button id="closeChatbot" class="close-btn">&times;</button> <!-- Changed to use an ID -->
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+            <p>Hello! Ready to Explore? Let’s find the perfect course for your passion?</p>
+        </div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="userMessage" placeholder="Type your message here...">
+        <button id="sendMessage">Send</button>
+    </div>
+</div>
+
+
+    </main>
+
+  <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-section contact-info">
+            <h3>Contact Us</h3>
+            <p>International Institute of Education- IIE</p>
+            <p>Level 1 16-18 Wentworth Street, Parramatta, NSW, 2150, Australia</p>
+            <p>Phone: +61 (02) 88972125</p>
+            <p>Email: info@iie.edu.au</p>
+        </div>
+        
+        <div class="footer-section useful-links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#">Department of Home Affairs</a></li>
+                <li><a href="#">Department of Education</a></li>
+                <li><a href="#">Study Australia</a></li>
+                <li><a href="#">ASQA</a></li>
+                <li><a href="#">Commonwealth Ombudsman</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section about-us">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Why Study at IIE?</a></li>
+                <li><a href="#">Our Values</a></li>
+                <li><a href="#">Representatives</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section online-forms">
+            <h3>Online Forms</h3>
+            <ul>
+                <li><a href="#">Agent Application</a></li>
+                <li><a href="#">International Student Enrolment</a></li>
+                <li><a href="#">ID Card Request</a></li>
+                <li><a href="#">Refund Request Application</a></li>
+                <li><a href="#">Student Document Request Form</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section additional-links">
+            <h3>Additional Links</h3>
+            <ul>
+                <li><a href="#">Staff Login</a></li>
+                <li><a href="#">Partner Login</a></li>
+            </ul>
+            <p>&copy; International Institute of Education | RTO No: 45150 CRICOS: 03838G |</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sendMessageButton = document.getElementById('sendMessage');
+    const userMessageInput = document.getElementById('userMessage');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const closeButton = document.getElementById('closeChatbot');  // Using ID now
+    const toggleButton = document.getElementById('toggleChatbot');
+    const chatbotContainer = document.getElementById('chatbotContainer');
+
+    // Check if elements are found in the DOM
+    if (!sendMessageButton || !userMessageInput || !chatbotMessages || !closeButton || !toggleButton || !chatbotContainer) {
+        console.error("One or more elements not found in the DOM.");
+        return;
+    }
+
+    // Send message button click event
+    sendMessageButton.addEventListener('click', () => {
+        const userMessage = userMessageInput.value.trim();
+        if (userMessage) {
+            addMessage('user', userMessage);
+            userMessageInput.value = '';
+
+            // Simulate bot response
+            setTimeout(() => {
+                const botResponse = getBotResponse(userMessage);
+                addMessage('bot', botResponse);
+            }, 1000);
+        }
+    });
+
+    // Enter key press event for user message input
+    userMessageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessageButton.click();
+        }
+    });
+
+    // Close button click event
+    closeButton.addEventListener('click', () => {
+        chatbotContainer.style.display = 'none'; // Hide the chatbot container
+        toggleButton.style.display = 'block'; // Show the toggle button
+    });
+
+    // Toggle button click event
+    toggleButton.addEventListener('click', () => {
+        if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+            chatbotContainer.style.display = 'block'; // Show the chatbot container
+            toggleButton.style.display = 'none'; // Hide the toggle button
+        }
+    });
+
+    // Function to add a message to the chat
+    function addMessage(sender, text) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}-message`;
+        messageDiv.innerHTML = `<p>${text}</p>`;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Auto-scroll to latest message
+    }
+
+    // Function to get a bot response based on user message
+    function getBotResponse(userMessage) {
+        const courses = {
+            accounting: "Introduction to Accounting: This course provides a comprehensive introduction to accounting principles and practices. Duration: 12 weeks. Fees Structure: $1,200.",
+            arts: "Introduction to Arts: This course explores various art forms and creative techniques. Duration: 10 weeks. Fees Structure: $950.",
+            business: "Introduction to Business: This course covers fundamental business concepts and practices. Duration: 14 weeks. Fees Structure: $1,500.",
+            science: "Introduction to Science: This course provides an overview of various scientific disciplines. Duration: 16 weeks. Fees Structure: $1,800.",
+            law: "Introduction to Law: This course covers the basics of legal systems and principles. Duration: 15 weeks. Fees Structure: $2,000.",
+            psychology: "Introduction to Psychology: This course explores fundamental concepts in psychology. Duration: 12 weeks. Fees Structure: $1,100.",
+            design: "Introduction to Design: This course covers basic design principles and techniques. Duration: 8 weeks. Fees Structure: $900.",
+            communication: "Introduction to Communication: This course focuses on effective communication skills. Duration: 10 weeks. Fees Structure: $850.",
+            health: "Introduction to Health: This course provides an overview of health and wellness. Duration: 12 weeks. Fees Structure: $1,100.",
+            media: "Introduction to Media: This course explores the media landscape. Duration: 14 weeks. Fees Structure: $1,400.",
+            fashion: "Introduction to Fashion: This course covers the fundamentals of fashion design. Duration: 8 weeks. Fees Structure: $950."
+        };
+
+        // Provide details for known courses
+        const courseDetail = courses[userMessage.toLowerCase()];
+        return courseDetail || 'Sorry, I do not have information on that course.';
+    }
+});
+
+
+
+        document.getElementById('mainSearchInput').addEventListener('input', function () {
+            let filter = this.value.toLowerCase();
+            let courseCategories = document.querySelectorAll('.course-category');
+            
+            courseCategories.forEach(category => {
+                let categoryName = category.querySelector('h2').textContent.toLowerCase();
+                if (categoryName.includes(filter)) {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        });
+
+        function showDetails(category) {
+            document.querySelectorAll('.course-details').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            document.getElementById(category).style.display = 'block';
+            document.querySelector('.course-grid').style.display = 'none';
+            document.querySelector('.main-search-bar').style.display = 'none';
+        }
+
+        function hideDetails() {
+            document.querySelectorAll('.course-details').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            document.querySelector('.course-grid').style.display = 'grid';
+            document.querySelector('.main-search-bar').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

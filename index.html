@@ -10,7 +10,43 @@
 </head>
 <body>
 
+
     <header>
+	
+			<button class="sidebar-toggle" onclick="toggleSidebar()"></button> <!-- Initial arrow icon -->
+
+    <div class="sidebar-container" id="sidebarContainer">
+        <div class="sidebar-header">
+            <div class="title">Upcoming Events</div>
+            <button class="toggle-button" onclick="toggleSidebar()"></button> <!-- Initial arrow icon -->
+        </div>
+        <button class="show-all-events" onclick="showAllEvents()">Show All Events</button>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="calendar-controls">
+                    <select id="monthSelect" onchange="changeMonth()"></select>
+                    <select id="yearSelect" onchange="changeYear()"></select>
+                </div>
+                <div class="month-year" id="monthYear"></div>
+            </div>
+            <div class="mini-calendar">
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+            <div class="event-container" id="eventContainer">
+                <!-- Events will be dynamically added here -->
+            </div>
+        </div>
+
+    </div>
+
+
+  
+
+        <div class="header-banner" id="headerBanner">
+            <p>Welcome to the International Institute of Education! Check out our <a href="events.html">latest events!</a></p>
+            <button onclick="closeBanner()" class="close-banner">&times;</button>
+        </div>
+        
         <div class="header-icons-container">
             <div class="header-icons">
                 <!-- Staff Portal Icon -->
@@ -46,10 +82,11 @@
         </div>
     </header>
 
+ 
  <nav class="navbar">
     <div class="nav-container">
         <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="IIE Logo"></a>
+            <a href="index.php"><img src="images/logo.png" alt="IIE Logo"></a>
         </div>
         <div class="hamburger-menu">
             <div class="bar"></div>
@@ -59,7 +96,7 @@
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="#">About Us</a>
+                <a href="aboutus.html">About Us</a>
                 <div class="dropdown-content">
                     <a href="welcome.html">Welcome Message</a>
                     <a href="why-study-at-iie.html">Why Study At IIE?</a>
@@ -69,35 +106,7 @@
                 </div>
             </li>
             <li><a href="events.html">Events</a></li>
-            <li class="dropdown">
-                <a href="#">Courses</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="international-courses.html">International Student</a>
-                        <div class="submenu-content">
-                            <a href="#">Accounting</a>
-                            <a href="#">Community Service</a>
-                            <a href="#">Early Childhood Education</a>
-                            <a href="#">Health And Science</a>
-                            <a href="#">Hospitality Management</a>
-                            <a href="#">Information Technology</a>
-                            <a href="#">Management</a>
-                        </div>
-                    </div>
-                    <div class="submenu">
-                        <a href="domestic-courses.html">Domestic Student</a>
-                        <div class="submenu-content">
-                            <a href="#">Accounting</a>
-                            <a href="#">Community Services</a>
-                            <a href="#">Early Childhood Education</a>
-                            <a href="#">Health And Science</a>
-                            <a href="#">Hospitality Management</a>
-                            <a href="#">Information Technology</a>
-                            <a href="#">Management</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
+            <li><a href="courses.html">Courses</a></li>
             <li class="dropdown">
                 <a href="#">Resources</a>
                 <div class="dropdown-content">
@@ -117,37 +126,17 @@
 </nav>
 
 
-
-
-
-
-
-
-
-    <!-- Main Content -->
-    <main>
-        <!-- Image below navbar -->
-        <section class="hero-section">
-            <img src="images/background.jpg" alt="Campus" class="hero-image">
-            <div class="hero-overlay">
-                <h1>Welcome to the International Institute of Education</h1>
-                <p>Empowering students to achieve their academic and career goals</p>
-                <a href="about.html" class="hero-cta">Discover More</a>
-            </div>
-        </section>
-        
-        <!-- Quote Section -->
-        <section class="quote-section">
-            <div class="container">
-                <div class="quote-container">
-                    <div class="quote-text">
-                        <p>"Education is not the filling of a pail, but the lighting of a fire." - William Butler Yeats</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Image Content Sections -->
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1>Welcome to the International Institute of Education</h1>
+            <p>Empowering students to achieve their academic and career goals</p>
+            <a href="application form/index.php" class="hero-cta">Register Now</a>
+        </div>
+    </section>
+	 <!-- Image Content Sections -->
         <div class="ic-container">
             <!-- First Image Content Section -->
             <div class="image-content-container">
@@ -158,7 +147,7 @@
                     <div class="content">
                         <h2>Why IIE?</h2>
                         <p>At the International Institute of Education (IIE), we empower our students to unlock their full potential and achieve their academic and career goals. With a diverse range of courses, experienced faculty, and state-of-the-art facilities, we provide a transformative educational experience that prepares you for success in the modern world.</p>
-                        <a href="about.html" class="cta">Learn More</a>
+                        <a href="why-study-at-iie.html" class="cta">Learn More</a>
                     </div>
                 </section>
             </div>
@@ -178,98 +167,217 @@
             </div>
         </div>
 
-      <!-- Our Courses Section -->
-<section class="our-courses">
-    <h2>Our Courses</h2>
-    <div class="container-courses">
-        <div class="card">
-            <img src="images/it.jpg" alt="Information Technology">
-            <div class="overlay"></div>
-            <div class="course-name">Information Technology</div>
+
+    <!-- Key Statistics Section -->
+<section class="key-stats">
+    <h2>IIE at a Glance</h2>
+    <div class="stats-container">
+        <div class="stat-item">
+            <span class="stat-number">5,000+</span>
+            <span class="stat-label">Students</span>
         </div>
-        <div class="card">
-            <img src="images/accounting.png" alt="Accounting">
-            <div class="overlay"></div>
-            <div class="course-name">Accounting</div>
+        <div class="stat-item">
+            <span class="stat-number">15:1</span>
+            <span class="stat-label">Student-Faculty Ratio</span>
         </div>
-        <div class="card">
-            <img src="images/finance.jpg" alt="Finance">
-            <div class="overlay"></div>
-            <div class="course-name">Finance</div>
+        <div class="stat-item">
+            <span class="stat-number">92%</span>
+            <span class="stat-label">Job Placement Rate</span>
         </div>
-        <div class="card">
-            <img src="images/childhood.jpg" alt="Early Childhood Education">
-            <div class="overlay"></div>
-            <div class="course-name">Early Childhood Education</div>
-        </div>
-        <div class="card">
-            <img src="images/community.jpg" alt="Community Services">
-            <div class="overlay"></div>
-            <div class="course-name">Community Services</div>
-        </div>
-        <div class="card">
-            <img src="images/management.jpg" alt="Management">
-            <div class="overlay"></div>
-            <div class="course-name">Management</div>
+        <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Countries Represented</span>
         </div>
     </div>
 </section>
 
-        <!-- News and Events Section -->
-        <div class="news-events">
-            <!-- Latest News -->
-            <div class="news">
-                <h2>Latest News</h2>
-                <div class="container-news">
-                    <!-- News Articles -->
-                    <section class="news-article">
-                        <img src="images/visanews.jpg" alt="News 1">
-                        <div class="news-description">
-                            <h3>Immigration Meeting</h3>
-                            <p>Join us for an important immigration meeting to discuss the latest updates and opportunities for international students.</p>
-                            <a href="news.html">Read More</a>
-                        </div>
-                    </section>
-                    <section class="news-article">
-                        <img src="images/covidnews.jpg" alt="News 2">
-                        <div class="news-description">
-                            <h3>COVID Hits Again</h3>
-                            <p>Stay informed about the latest developments regarding COVID-19 as it continues to impact our communities.</p>
-                            <a href="news.html">Read More</a>
-                        </div>
-                    </section>
+
+
+
+
+    <!-- Our Courses Section -->
+    <section class="our-courses">
+        <h2>Our Courses</h2>
+        <div class="container-courses">
+            <a href="courses.html">
+                <div class="card">
+                    <img src="images/it.jpg" alt="Information Technology">
+                    <div class="overlay"></div>
+                    <div class="course-name">Information Technology</div>
                 </div>
-            </div>
-            
-            <!-- Upcoming Events -->
-            <div class="events">
-                <h2>Upcoming Events</h2>
-                <div class="event">
-                    <img src="images/fun.jpg" alt="Event 1">
-                    <div class="event-details">
-                        <a href="events.html">
-                            <h3>Event 1 Title</h3>
-                        </a>
-                        <p>Date: January 1, 2025</p>
-                        <p>Location: Venue 1</p>
-                    </div>
+            </a>
+            <a href="courses.html">
+                <div class="card">
+                    <img src="images/accounting.png" alt="Accounting">
+                    <div class="overlay"></div>
+                    <div class="course-name">Accounting</div>
                 </div>
-                <div class="event">
-                    <img src="images/person.jpg" alt="Event 2">
-                    <div class="event-details">
-                        <a href="events.html">
-                            <h3>Event 2 Title</h3>
-                        </a>
-                        <p>Date: February 15, 2025</p>
-                        <p>Location: Venue 2</p>
-                    </div>
+            </a>
+            <a href="courses.html">
+                <div class="card">
+                    <img src="images/finance.jpg" alt="Finance">
+                    <div class="overlay"></div>
+                    <div class="course-name">Finance</div>
                 </div>
-            </div>
+            </a>
+            <a href="courses.html">
+                <div class="card">
+                    <img src="images/childhood.jpg" alt="Early Childhood Education">
+                    <div class="overlay"></div>
+                    <div class="course-name">Early Childhood Education</div>
+                </div>
+            </a>
+            <a href="courses.html">
+                <div class="card">
+                    <img src="images/community.jpg" alt="Community Services">
+                    <div class="overlay"></div>
+                    <div class="course-name">Community Services</div>
+                </div>
+            </a>
+            <a href="courses.html">
+                <div class="card">
+                    <img src="images/management.jpg" alt="Management">
+                    <div class="overlay"></div>
+                    <div class="course-name">Management</div>
+                </div>
+            </a>
         </div>
+    </section>
+	
+<!-- Accreditations and Rankings Section -->
+<section class="accreditations">
+    <h2>Our Accreditations and Rankings</h2>
+    <ul>
+        <li>Accredited by the Higher Education Commission</li>
+        <li>Ranked #5 in Best Value Colleges 2024</li>
+        <li>Top 10 for International Student Satisfaction</li>
+    </ul>
+</section>
+
+<!-- Campus Life Section -->
+<section class="campus-life">
+    <h2>Campus Life at IIE</h2>
+    <div class="campus-life-grid">
+        <div class="campus-life-item">
+            <a href="studentclub.html">
+                <img src="images/studentclub.jpg" alt="Student Clubs">
+                <h3>Student Clubs</h3>
+            </a>
+        </div>
+        <div class="campus-life-item">
+            <a href="sportsfacilities.html">
+                <img src="images/sportsfacility.jpg" alt="Sports Facilities">
+                <h3>Sports Facilities</h3>
+            </a>
+        </div>
+        <div class="campus-life-item">
+            <a href="events.html">
+                <img src="images/events.jpg" alt="Campus Events">
+                <h3>Campus Events</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Virtual Tour Section -->
+<section class="virtual-tour">
+    <h2>Explore Our Campus</h2>
+    <p>Take a virtual tour of our state-of-the-art facilities.</p>
+	</section>
+    
+	
+	<section class="campus-grid">
+  <div class="campus-card">
+    <img src="images/building.jpg" alt="IIE Parramatta Campus">
+    <div class="campus-info">
+      <h3>IIE Parramatta Campus</h3>
+      <p><strong>Address:</strong> Level 1 16-18 Wentworth Street, Parramatta, NSW 2150, Australia</p>
+      <p><strong>Website:</strong> www.iie.edu.au</p>
+      <p><strong>Phone:</strong> +61(02)88972125</p>
+      <p><strong>Email:</strong> info@iie.edu.au</p>
+      <a href="#" class="explore-btn">Explore Campus</a>
+    </div>
+  </div>
+
+  <div class="campus-card">
+    <img src="images/melbourne.jpg" alt="IIE Melbourne Campus">
+    <div class="campus-info">
+      <h3>IIE Melbourne Campus</h3>
+      <p><strong>Address:</strong> Level 8, 85 Queen Street, Melbourne, VIC 3000, Australia</p>
+      <p><strong>Website:</strong> www.iie.edu.au</p>
+      <p><strong>Phone:</strong> +61(03)86529393, +61(03)70326358</p>
+      <p><strong>Email:</strong> info@iie.edu.au</p>
+      <a href="#" class="explore-btn">Explore Campus</a>
+    </div>
+  </div>
+
+  <div class="campus-card">
+    <img src="images/college.jpg" alt="IIE Tasmania Campus">
+    <div class="campus-info">
+      <h3>IIE Tasmania Campus</h3>
+      <p><strong>Address:</strong> Level 1, 116 Bathurst Street, Hobart, TAS 7000, Australia</p>
+      <p><strong>Website:</strong> www.iie.edu.au</p>
+      <p><strong>Phone:</strong> +61(03) 61692209</p>
+      <p><strong>Email:</strong> tas@iie.edu.au</p>
+      <a href="#" class="explore-btn">Explore Campus</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- International Students Section -->
+<section class="international-students">
+    <h2>Welcome to Our Global Community!</h2>
+    <p>At our institution, we embrace diversity and celebrate cultures from around the world. Join a vibrant community of international students and gain a unique educational experience that prepares you for a global career.</p>
+    
+    <h3>Why Choose Us?</h3>
+    <ul>
+        <li>🌍 <strong>Global Perspective:</strong> Learn from experienced educators and industry professionals who bring a wealth of knowledge from various backgrounds.</li>
+        <li>🤝 <strong>Supportive Environment:</strong> Our dedicated international student support team is here to assist you every step of the way, from application to graduation.</li>
+        <li>🎉 <strong>Cultural Events:</strong> Participate in exciting cultural events and activities that allow you to connect with fellow students and share your heritage.</li>
+        <li>🏙️ <strong>Prime Location:</strong> Study in a dynamic city with access to world-class amenities, entertainment, and networking opportunities.</li>
+    </ul>
+
+    <p>We welcome students from around the globe. Find resources and information specific to international applicants.</p>
+    
+    <a href="#" class="cta-button">Join Now</a>
+    
+    <h3>Ready to Take the Next Step?</h3>
+    
+</section>
+
+
+
+   
+
+    
+	<!-- Student Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <p>"IIE has provided me with incredible opportunities. The practical approach to learning has prepared me well for my career."</p>
+            <span class="student-name">- Sarah J., Information Technology</span>
+        </div>
+        <div class="testimonial">
+            <p>"The diverse student body and supportive faculty make IIE a truly unique place to study and grow."</p>
+            <span class="student-name">- Michael L., Accounting</span>
+        </div>
+    </div>
+</section>
+
+
+        
+        
         
         <!-- Feedback Section -->
         <div class="container-feedback">
             <a href="enquiryform.html">
+			 
                 <h2>Any Enquiries?</h2>
             </a>
         </div>
@@ -299,10 +407,10 @@
         <div class="footer-section about-us">
             <h3>About Us</h3>
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Why Study at IIE?</a></li>
-                <li><a href="#">Our Values</a></li>
-                <li><a href="#">Representatives</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="why-study-at-iie.html">Why Study at IIE?</a></li>
+                <li><a href="our-values.html">Our Values</a></li>
+                <li><a href="representatives.html">Representatives</a></li>
             </ul>
         </div>
         
@@ -325,23 +433,211 @@
             </ul>
             <p>&copy; International Institute of Education | RTO No: 45150 CRICOS: 03838G |</p>
         </div>
+		
     </div>
 </footer>
    
     <!-- JavaScript File -->
  <!-- JavaScript File -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuBtn = document.querySelector('.hamburger-menu');
-            const menu = document.querySelector('.menu');
+	
+	document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const menu = document.querySelector('.menu');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-            menuBtn.addEventListener('click', function () {
-                menu.classList.toggle('show');
-            });
+    // Function to close all dropdowns
+    function closeAllDropdowns() {
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+            const dropdownContent = dropdown.querySelector('.dropdown-content');
+            if (dropdownContent) {
+                dropdownContent.style.display = 'none';
+            }
         });
-    </script>
+    }
 
-<script>
+    // Toggle hamburger menu and main menu
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        menu.classList.toggle('active');
+        
+        // If closing the menu, also close all dropdowns
+        if (!menu.classList.contains('active')) {
+            closeAllDropdowns();
+        }
+    });
+
+    // Handle dropdown menus
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+        dropdownLink.addEventListener('click', function(e) {
+            // Prevent default action only on mobile
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                
+                // Close other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                        const otherContent = otherDropdown.querySelector('.dropdown-content');
+                        if (otherContent) {
+                            otherContent.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+                if (dropdownContent) {
+                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+                }
+            }
+        });
+    });
+
+    // Close menu and dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            menu.classList.remove('active');
+            hamburger.classList.remove('active');
+            closeAllDropdowns();
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            menu.classList.remove('active');
+            hamburger.classList.remove('active');
+            closeAllDropdowns();
+        }
+    });
+});
+	 const sidebarContainer = document.getElementById('sidebarContainer');
+        const calendarGrid = document.getElementById('calendarGrid');
+        const monthYear = document.getElementById('monthYear');
+        const eventContainer = document.getElementById('eventContainer');
+        const sidebarToggle = document.querySelector('.sidebar-toggle');
+
+        const events = [
+            { title: 'Orientation Day', date: '2024-08-21', time: '09:00 AM', location: 'Main Hall' },
+            { title: 'Mid-Semester Exam', date: '2024-08-30', time: '10:00 AM', location: 'Room 101' },
+            { title: 'Guest Lecture: AI Trends', date: '2024-09-05', time: '02:00 PM', location: 'Lecture Theatre 2' },
+            { title: 'Club Fair', date: '2024-09-10', time: '11:00 AM', location: 'Campus Square' },
+            { title: 'Career Counseling', date: '2024-09-15', time: '01:00 PM', location: 'Career Center' },
+            { title: 'Final Project Presentations', date: '2024-10-01', time: '03:00 PM', location: 'Auditorium' },
+            { title: 'End of Semester Party', date: '2024-10-20', time: '06:00 PM', location: 'Student Lounge' },
+            { title: 'Graduation Ceremony', date: '2024-12-15', time: '10:00 AM', location: 'Main Hall' }
+        ];
+
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        function populateCalendar() {
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            calendarGrid.innerHTML = '';
+
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                calendarGrid.appendChild(emptyCell);
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'day-cell';
+                dayCell.textContent = day;
+                const dateString = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+                if (events.some(event => event.date === dateString)) {
+                    dayCell.classList.add('has-event');
+                }
+
+                dayCell.addEventListener('click', () => {
+                    showEventsForDay(dateString);
+                });
+
+                calendarGrid.appendChild(dayCell);
+            }
+
+            monthYear.textContent = `${new Date(currentYear, currentMonth).toLocaleString('default', { month: 'long' })} ${currentYear}`;
+        }
+
+        function populateEventContainer(eventsForDay) {
+            eventContainer.innerHTML = '';
+            eventsForDay.forEach(event => {
+                const eventBox = document.createElement('div');
+                eventBox.className = 'event-box';
+                eventBox.innerHTML = `
+                    <h3>${event.title}</h3>
+                    <p class="event-time">${event.time}</p>
+                    <p class="event-location">${event.location}</p>
+                `;
+                eventContainer.appendChild(eventBox);
+            });
+        }
+
+        function showEventsForDay(date) {
+            const eventsForDay = events.filter(event => event.date === date);
+            populateEventContainer(eventsForDay);
+        }
+
+        function toggleSidebar() {
+            sidebarContainer.classList.toggle('show');
+        }
+
+        function showAllEvents() {
+            populateEventContainer(events);
+        }
+
+        function changeMonth() {
+            const monthSelect = document.getElementById('monthSelect');
+            currentMonth = parseInt(monthSelect.value, 10);
+            populateCalendar();
+        }
+
+        function changeYear() {
+            const yearSelect = document.getElementById('yearSelect');
+            currentYear = parseInt(yearSelect.value, 10);
+            populateCalendar();
+        }
+
+        function initialize() {
+            const monthSelect = document.getElementById('monthSelect');
+            const yearSelect = document.getElementById('yearSelect');
+            const months = Array.from({ length: 12 }, (_, i) => i);
+
+            months.forEach(month => {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = new Date(currentYear, month).toLocaleString('default', { month: 'long' });
+                monthSelect.appendChild(option);
+            });
+
+            for (let year = currentYear - 5; year <= currentYear + 5; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            }
+
+            monthSelect.value = currentMonth;
+            yearSelect.value = currentYear;
+
+            populateCalendar();
+        }
+
+        initialize();
+		
+
+    </script>
+	
+
+
+ 
 
 
 

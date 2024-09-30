@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Volunteer Opportunities for Students">
+    <title>University Volunteer Opportunities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0056b3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+        }
+
+        .opportunity {
+            margin-bottom: 30px;
+        }
+
+        .opportunity h3 {
+            color: #218838;
+        }
+
+        .opportunity p {
+            font-size: 16px;
+        }
+
+        .opportunity button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .opportunity button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>University Volunteer Opportunities</h1>
+    <p>Make a difference by volunteering for these events</p>
+</header>
+
+<!---
+<nav>
+    <a href="#opportunity1">Opportunity 1</a>
+    <a href="#opportunity2">Opportunity 2</a>
+    <a href="#opportunity3">Opportunity 3</a>
+</nav>
+--->
+
+<section id="opportunities">
+    <h2>Volunteer Opportunities</h2>
+
+    <div class="opportunity" id="opportunity1">
+        <h3>Community Clean-up Event</h3>
+        <p>Join us for a community clean-up day to help improve our local parks and green spaces. Volunteers will assist in collecting litter, planting trees, and other environmental tasks.</p>
+        <p><strong>Date:</strong> October 5, 2024 | <strong>Time:</strong> 9 AM - 12 PM</p>
+        <button onclick="window.location.href='register.html'">Register for Event</button>
+    </div>
+
+    <div class="opportunity" id="opportunity2">
+        <h3>Food Bank Drive</h3>
+        <p>Help organize and distribute food to those in need at the local food bank. Volunteers will help sort donations, package goods, and assist with distribution.</p>
+        <p><strong>Date:</strong> October 12, 2024 | <strong>Time:</strong> 10 AM - 2 PM</p>
+        <button onclick="window.location.href='register.html'">Register for Event</button>
+    </div>
+
+    <div class="opportunity" id="opportunity3">
+        <h3>Animal Shelter Support</h3>
+        <p>Spend a day at the local animal shelter assisting with animal care, cleaning, and playing with the animals. Your support helps ensure the animals are well taken care of while they wait for their forever homes.</p>
+        <p><strong>Date:</strong> October 19, 2024 | <strong>Time:</strong> 11 AM - 3 PM</p>
+        <button onclick="window.location.href='register.html'">Register for Event</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2024 University Volunteer Program. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
